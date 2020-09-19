@@ -57,6 +57,11 @@ h2 {
   color: darkgreen;
 }
 
+h1:hover,
+h2:hover {
+  font-weight: normal;
+}
+
 p {
   color: darkgreen;
   font-family: Perpetua, Rockwell Extra Bold;
@@ -65,6 +70,11 @@ p {
   font-size: 20px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#about p:hover {
+  transition: transform 1s;
+  transform: scale(1.01)
 }
 
 q {
@@ -76,9 +86,16 @@ a {
   color: blue;
 }
 
-#github a {
+#github-link {
   text-align: center;
   display: block;
+  padding-top: 5px;
+  
+}
+
+#github-link:hover {
+  transition: transform 2s;
+  transform: scale(1.1);
 }
 
 /* HOME */
@@ -106,6 +123,11 @@ a {
   padding-right: 60px;
 }
 
+.home-text p:hover {
+  transition: transform 2s;
+  transform: scale(1.1)
+}
+
 /* TABLE */
 .row:after {
   content: "";
@@ -117,7 +139,7 @@ a {
   float: left;
   width: 50%;
   padding: 10px;
-  padding-top: 3%;
+  padding-top: 40px;
   background-color: white;
 }
 
@@ -163,6 +185,12 @@ img:hover {
 }
 
 /* FORM */
+form {
+  padding: 20px;
+  font-family: "Trebuchet MS", Optima;
+  color: darkgreen;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -203,10 +231,12 @@ input[type="submit"] {
   font-family:"Trebuchet MS", Optima;
 }
 
-form {
-  padding: 20px;
-  font-family: "Trebuchet MS", Optima;
+input[type="submit"]:hover {
+  background-color: white;
   color: darkgreen;
+  font-weight: bold;
+  transition: transform 2s;
+  transform: scale(1.5);
 }
 
 /* FOOTER */
@@ -221,5 +251,10 @@ footer {
 footer p {
   text-align: center;
   color: white;
+}
+
+footer p:hover {
+  transition: transform 2s;
+  transform: scale(1.1);
 }
 
