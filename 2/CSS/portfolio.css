@@ -1,0 +1,422 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  letter-spacing: .2vw;
+  font-family: Avant Garde, Helvetica;
+  font-size: 1.5vw;
+  opacity: 1;
+  transition: 3s opacity
+}
+
+body.fade-out {
+  opacity: .1;
+  transition: none;
+}
+
+/* NAVBAR */
+.Navbar {
+  background-color: darkgreen;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  animation: moveNav 5s;
+  -webkit-animation: moveNav 5s;
+}
+
+.Navbar a {
+  float: left;
+  display: block;
+  color: white;
+  padding: .75vw 1vw;
+  text-decoration: none;
+  font-family: Avant Garde, Helvetica;
+  font-size: 1.5vw;
+  letter-spacing: .2vw;
+  text-align: center;
+  position: relative; /* Is this needed for the animation?*/
+  animation: moveNavText 5.75s;
+  -webkit-animation: moveNavText 5.75s;
+}
+
+@keyframes moveNav {
+  from {left: -100vw;}
+  to {left: 0vw;}
+}
+
+@keyframes moveNavText {
+  from {top: -100vw;}
+  to {top: 0vw;}
+}
+
+@keyframes moveVideoText {
+  from {top: -100vw;}
+  to {top: 0vw;}
+}
+
+.Navbar a:hover {
+  background-color: white;
+  color: darkgreen;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+.Navbar a.Active {
+  background-color: rgb(1, 156 ,1);
+}
+
+#HomeVideo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+  z-index: -1;
+  animation: zoomInOut 5s;
+}
+
+@keyframes zoomInOut {
+  0% { transform: scale(10,10); }
+  100% { transform: scale(1,1); }
+}
+
+.VideoText {
+  background: rgba(0, 120, 0, 0.5);
+  color:  White;
+  width: 100%;
+  padding-top: .1vh;
+  padding-bottom: 1vh;
+  margin-top: 23%;
+  position: relative;
+  animation: moveVideoText 4s;
+  -webkit-animation: moveVideoText 4s;
+
+  /*extra*/
+  font-weight: bold;
+  font-size: 1.5vw;
+}
+
+#SlideshowBackground {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.mySlides {
+  display: none;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#SlidesContainer {
+  width: 39.4vw;
+  height: auto;
+  padding-top: 4%;
+  position: relative;
+  margin: auto;
+}
+
+.SlideImage {
+  vertical-align: middle;
+  width: 39.4vw;
+  height: 39.4vw;
+  box-shadow: 0 5px 10px 12px rgba(0, 0, 0, .75);
+  object-fit: cover;
+}
+
+.Previous,
+.Next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 2vw;
+  color: darkgrey;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.Next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover,
+.Next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.SlideText {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 100, 0, 0.75);
+  width: 100%;
+  text-align: center;
+  padding: 1vw;
+  border-radius: 7px;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+.SlideText a {
+  color: white;
+}
+
+.SlideNumber {
+  color: white;
+  position: absolute;
+  top: 0;
+  font-family: Perpetua, Rockwell Extra Bold;
+  letter-spacing: .1vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  display: none;
+}
+
+#DotsContainer {
+  text-align: center;
+}
+
+.Dot {
+  height: 1vw;
+  width: 1vw;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  margin: .25vw;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.Active,
+.Dot:hover {
+  background-color: black;
+}
+
+.fade {
+  -webkit-animation: fade 1.5s;
+  animation: fade 1.5s;
+}
+
+.Column1, .Column2 {
+  float: left;
+  width: 50%;
+  padding: 1.6%;
+}
+
+.Column1 {
+  background-color: white;
+}
+
+.Column2 {
+  background-color: darkgreen;
+  position: relative;
+}
+
+.Row1 {
+  height: 30vw;
+}
+
+.Row2 {
+  height: 30vw;
+}
+
+.Row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Optima;
+  text-align: center;
+  margin-top: 3%;
+  color: white;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Optima;
+  text-align: center;
+  margin-top: 3%;
+  color: darkgreen;
+}
+
+p {
+  font-family: Perpetua, Rockwell Extra Bold;
+  text-align: justify;
+  letter-spacing: .1vw;
+  font-size: 1.5vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+center {
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: center;
+	letter-spacing: .1vw;
+	font-size: 1.5vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+q {
+  font-style: italic;
+  font-weight: bold;
+}
+
+img {
+  filter: sepia(100%) hue-rotate(90deg);
+  border-radius: 8px;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+center:hover {
+  transition: transform 2s;
+  transform: scale(1.1);
+}
+
+p:hover {
+  transition: transform 1s;
+  transform: scale(1.01);
+}
+
+h1:hover,
+h2:hover {
+  font-weight: normal;
+}
+
+img:hover {
+  filter: none;
+  transition: transform 1s;
+  transform: scale(1.1);
+}
+
+/* CONTACT FORM STYLING */
+
+.PopUpButton {
+  bottom: 1.75vw;
+  right: 1.75vw;
+  width: 25vw;
+  background-color: white;
+  color: darkgreen;
+  border: 2px solid green;
+  cursor: pointer;
+  position: fixed;
+  animation: movePopup 5s;
+  -webkit-animation: movePopup 5s;
+}
+
+@keyframes movePopup {
+  from {right: -40vw;}
+  to {right: 1.75vw;}
+}
+
+.FormPopup {
+  border: 3px solid green;
+  z-index: 8;
+  display: none;
+  position: fixed;
+  bottom: 6px;
+  right: 6px;
+}
+
+.FormContainer {
+  max-width: 49vw;
+  padding: 9px;
+  background-color: white;
+  color: darkgreen;
+}
+
+.FormContainer input {
+  width: 100%;
+  padding: .93vw;
+  margin: .6vw 0 .6vw 0;
+  background: gainsboro;
+  font-family: Helvetica, Avant Garde;
+  font-size: 1vw;
+  border-color: green;
+}
+
+.FormContainer .btn {
+  background-color: white;
+  color: darkgreen;
+  border-color: green;
+  margin-bottom: 1vh;
+}
+
+.FormContainer .cancel {
+  background-color: darkred;
+  color: white;
+  border-color: green;
+}
+
+button {
+  font-family: "Trebuchet MS", Optima;
+  letter-spacing: .3vw;
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 1.5vw 1.5vw;
+  border-style: solid;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+button:hover,
+.FormContainer .btn:hover {
+  color: white;
+  background-color: darkgreen;
+  border-style: solid;
+  border-color: green;
+}
+
+.FormContainer .cancel:hover {
+  column-rule: white;
+  background-color: red;
+  border-style: solid;
+  border-color: black;
+}
+
+
+/* FOOTER */
+footer {
+  padding: 2%;
+  background-color: darkgreen;
+  text-align: center;
+  border-top: 1px solid green;
+  color: white;
+}

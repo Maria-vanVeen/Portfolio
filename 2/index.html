@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/portfolio.css">
+  <script src="JS/portfolio.js" defer></script>
+  <title>NEW Catharina van Veen</title>
+</head>
+
+<!-- BODY -->
+<body class="Background fade-out">
+
+<!-- NAVBAR -->
+  <div class="Navbar">
+    <a class="Active" href="#Home">Home</a>
+    <a href="#Slideshow">Slideshow</a>
+    <a href="#About">About</a>
+    <a href="#GitHub">GitHub</a>
+    <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+  </div>
+
+<!-- HOME -->
+  <div id="Home">
+    <br><!-- Breaks inserted to add space between navbar and first heading -->
+    <br>
+  </div>
+  
+<!-- VIDEO -->
+  <video autoplay muted loop id="HomeVideo">
+    <source src="media/videos/home-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+<!-- VIDEO TEXT -->
+  <div class="VideoText">
+    <h1>Catharina van Veen's Portfolio</h1>
+    <p>
+      <center>
+        <q>
+          You might not think that programmers are artists, but programming is an extremely creative profession. It's logic based creativity.
+        </q>
+        <br>-John Romero-<br>
+        <br>My name is Maria van Veen. Welcome to my portfolio website. Here I will tell you about my background and experience.<br>
+        <br>Thank you for stopping by and enjoy!
+      </center>
+      
+    </p>
+  </div>
+
+<!-- SLIDESHOW -->
+  <div id="Slideshow">
+    <div id="SlideshowBackground">
+      <div id="SlidesContainer">
+      
+        <div class="MySlides fade">
+          <div class="SlideNumber">1 / 6</div>
+          <img class="SlideImage" src="media/images/Myself.jpg" >
+          <div class="SlideText">I am available to work on your project!</div>
+        </div>
+
+        <div class="MySlides fade">
+          <div class="SlideNumber">2 / 6</div>
+          <img class="SlideImage" src="media/images/HTML_CSS_and_JavaScript.jpeg" >
+          <div class="SlideText">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+        </div>
+
+        <div class="MySlides fade">
+          <div class="SlideNumber">3 / 6</div>
+          <img class="SlideImage" src="media/images/Python.png" >
+          <div class="SlideText">the popular programming language Python,</div>
+        </div>
+
+        <div class="MySlides fade">
+          <div class="SlideNumber">4 / 6</div>
+          <img class="SlideImage" src="media/images/C_Sharp_and_Dot_NET.png" >
+          <div class="SlideText">C#, .NET Framework, ASP.NET, MVC,</div>
+        </div>
+
+        <div class="MySlides fade">
+          <div class="SlideNumber">5 / 6</div>
+          <img class="SlideImage" src="media/images/SQL_and_Database.jpg" >
+          <div class="SlideText">back end development, databases and SQL.</div>
+        </div>
+
+        <div class="MySlides fade">
+          <div class="SlideNumber">6 / 6</div>
+          <img class="SlideImage" src="media/images/contact.jpg" >
+          <div class="SlideText"><a onclick="openForm()">Contact me now!</a></div>
+        </div>
+
+        <a class="Previous" onclick="plusSlides(-1)">&#10094</a>
+        <a class="Next" onclick="plusSlides(1)">&#10095</a>
+        
+      </div>
+      <br>
+      <div id="DotsContainer">
+        <span class="Dot" onclick="currentSlide(1)"></span>
+        <span class="Dot" onclick="currentSlide(2)"></span>
+        <span class="Dot" onclick="currentSlide(3)"></span>
+        <span class="Dot" onclick="currentSlide(4)"></span>
+        <span class="Dot" onclick="currentSlide(5)"></span>
+        <span class="Dot" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+  </div>
+  
+<!-- ABOUT -->
+  <div class="Row " id="About">
+    <div class="Column2 Row1">
+      <img src="media/images/Development.jpg" alt="">
+    </div>
+    <div class="Column1 Row1">
+      <h2>About</h2>
+      <p>I am a software developer in training who loves to code!<br>
+        <br>I will be a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br>
+        <br>I am a full-stack developer and would love to work with you on your project. <a onclick="openForm()">Contact</a> me below!</p>
+    </div>
+  </div>
+
+<!-- GITHUB -->
+  <div class="Row " id="GitHub">
+    <div class="Column1 Row2">
+      <h2>GitHub</h2>
+      <p>
+        You can view my coding projects on my GitHub profile here:
+        <br><center><a href="https://github.com/Maria-vanVeen" target="_blank" id="github-link">Catharina van Veen GitHub</a></center>
+      </p>
+    </div>
+    <div class="Column2 Row2">
+      <a href="https://github.com/Maria-vanVeen" target="_blank"><img src="media/images/GitHub.png" alt=""></a>
+    </div>
+  </div>
+
+
+<!-- CONTACT -->
+  <div id="Contact">
+    <button onclick="openForm()" class="PopUpButton">CONTACT</button>
+    <div class="FormPopup" id="myForm">
+      <form action="https://formspree.io/catharina.vanveen@libertyserver.com" method="POST" class="FormContainer" >
+        <h2>Contact</h2>
+        <label for="Name">Name</label>
+          <input type="text" name="Name" placeholder="Your name" required>
+        <label for="Phone">Phone</label>
+          <input type="tel" name="Phone" placeholder="Your phone number" required>
+        <label for="Email">Email</label>
+          <input type="email" name="Email" placeholder="Your email address" required>
+        <label for="Message">Message</label>
+          <input type="text" name="Message" placeholder="Your message" required>
+        <button type="submit" class="btn">SUBMIT</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+      </form>
+    </div>
+    
+  </div>
+
+<!-- FOOTER -->
+<footer>
+  <p><center>Maria Catharina van Veen</center></p>
+</footer>
+  
+</body>
+</html>
